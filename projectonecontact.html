@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sneaker Haven</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+            padding: 40px;
+        }
+        .contact-form {
+            background-color: #333;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            width: 400px;
+        }
+        .contact-form h2 {
+            margin-bottom: 20px;
+            color: cyan;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            background-color: #555;
+            color: white;
+        }
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: cyan;
+            border: none;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #00b7b7;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <div class="contact-form">
+            <h2>Contact Us to make your order</h2>
+            <form onsubmit="sendMessage(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function sendMessage(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const phoneNumber = '254783434955';
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=Name:%20${name}%0AEmail:%20${email}%0AMessage:%20${message}`;
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+</body>
+</html>

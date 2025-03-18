@@ -1,0 +1,209 @@
+body{
+    background: linear-gradient(135deg, #A020F0, #FF00FF, #00FFFF);
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 600px 1fr;
+}
+
+.right-h{
+   font-family: lobster;
+}
+
+.left-h{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-h p{
+    cursor: pointer;
+}
+
+.left-h p:hover{
+    text-decoration: underline;
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+}
+
+.search-bar{
+    height: 40px;
+}
+
+input{
+    height: 20px;
+}
+
+.con-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.r-c-1{
+    width: 500px;
+}
+
+.p1{
+    font-size: 24px;
+    font-family: 'Satisfy', cursive;
+    color: cyan;
+    margin-bottom: 10px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.p2{
+    font-size: 40px;
+    font-weight: bold;
+    color: cyan;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 255, 255, 0.5);
+}
+
+.p3{
+    font-size: 20px;
+    font-style: italic;
+    color: red;
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0.8;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.m-display{
+    height: 800px;
+    animation: floatIn 1.5s ease-out forwards;
+    position: relative;
+    border-radius: 500px;
+    transition: transform 0.5s ease-in-out;
+    filter: drop-shadow(0 10px 15px rgba(0, 255, 255, 0.5));
+}
+
+@keyframes floatIn{
+    from {
+        left: -100px;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.m-display:hover{
+    transform: scale(1.05) rotate(-3deg);
+}
+
+.con-2{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: white;
+    margin-top: 150px;
+    border-radius: 100px;
+}
+
+.shoe-con{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+}
+
+.shoes{
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.5);
+    text-align: center;
+}
+
+.shoes div{
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.shoes img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.shoes img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px cyan;
+}
+
+.price-btn{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: cyan;
+    color: black;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.price-btn:hover{
+    background-color: purple;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px){
+    body{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .header{
+        grid-template-columns: 1fr;
+    }
+
+    .con-1{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .r-c-1{
+        width: 100%;
+    }
+
+    .m-display{
+        height: 400px;
+        border-radius: 200px;
+    }
+
+    .shoe-con{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .shoes img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .price-btn{
+        padding: 3px 8px;
+        font-size: 12px;
+    }
+}

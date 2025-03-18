@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    color: cyan;
+    font-size: 24px;
+    text-transform: uppercase;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px cyan; }
+    to { text-shadow: 0 0 20px cyan; }
+}
+
+.left-h p {
+    cursor: pointer;
+    margin: 0 20px;
+    color: cyan;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.left-h p:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Gallery Grid */
+.show {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    height: 100vh;
+    gap: 10px;
+}
+
+.left, .right {
+    display: grid;
+    grid-template-rows: 30% 30% 40%;
+    gap: 10px;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+}
+
+/* Click Me Button */
+.click-btn {
+    position: absolute;
+    bottom: 10px;
+    background-color: cyan;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.click-btn:hover {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .left-h p {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    .show {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 10px;
+    }
+
+    .left, .right {
+        grid-template-rows: repeat(3, 1fr);
+        gap: 5px;
+    }
+
+    img {
+        border-radius: 5px;
+    }
+
+    .click-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
