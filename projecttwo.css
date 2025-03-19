@@ -1,16 +1,16 @@
 body {
-    padding-bottom: 300px;
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
+    padding-bottom: 300px;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 20px;
     background: rgba(0, 0, 0, 0.7);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
     position: fixed;
@@ -20,13 +20,13 @@ body {
 }
 
 .logo {
-    height: 50px;
+    height: 40px;
     margin-left: 10px;
     border-radius: 50px;
 }
 
 .frost {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
     color: #e0f7fa;
     text-shadow: 2px 2px 5px #000, 0 0 15px #00eaff;
@@ -36,26 +36,26 @@ body {
 .about-header {
     background-color: #333;
     color: #fff;
-    padding: 30px 20px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .about-header h1 {
     margin-bottom: 10px;
     font-size: 32px;
+    line-height: 1.2;
 }
 
 .about-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding: 20px;
     gap: 20px;
 }
 
 .about-content img {
-    width: 80%;
+    width: 90%;
     max-width: 400px;
     height: auto;
     border-radius: 15px;
@@ -63,7 +63,8 @@ body {
 }
 
 .about-text {
-    max-width: 90%;
+    width: 90%;
+    max-width: 600px;
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -75,20 +76,20 @@ body {
 }
 
 .about-mission, .about-values, .about-team {
-    max-width: 90%;
+    width: 90%;
+    max-width: 600px;
     margin-top: 20px;
     text-align: center;
 }
 
 .about-mission h2, .about-values h2, .about-team h2 {
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 10px;
 }
 
 .about-values ul {
     list-style: none;
-    padding-left: 0;
-    margin-top: 10px;
+    padding: 0;
 }
 
 .about-values li {
@@ -96,20 +97,20 @@ body {
 }
 
 button {
-    padding: 12px 25px;
-    margin: 15px;
+    padding: 10px 20px;
+    margin: 10px;
     background-color: black;
     color: white;
     border-radius: 20px;
-    transition: background-color 0.3s, color 0.3s;
+    border: none;
     cursor: pointer;
     font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 button:hover {
     background-color: white;
     color: black;
-    transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -121,7 +122,7 @@ button:active {
 /* Responsive Design */
 @media (max-width: 768px) {
     .about-header h1 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .about-content {
@@ -138,7 +139,27 @@ button:active {
     }
 
     button {
-        padding: 10px 20px;
+        padding: 8px 18px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-header h1 {
+        font-size: 22px;
+    }
+
+    .about-content img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .about-text, .about-mission, .about-values, .about-team {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 6px 15px;
         font-size: 12px;
     }
 }
