@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding-bottom: 300px;
+    
+    
+
+}
+.logo{
+    height:60px;
+    border-radius: 100px;
+    margin-top:18px;
+    margin-left:20px;
+    
+}
+.header{
+    display:grid;
+    grid-template-columns: 1400px 1fr;
+    position:fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    z-index: 10; 
+    
+    
+}
+.r-header{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+.input{
+    margin-right: 20px;
+}
+.frost {
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px #000, 0 0 15px #00eaff, 0 0 25px #00eaff;
+    letter-spacing: 2px;
+    color: #e0f7fa;
+    text-transform: uppercase;
+    opacity: 0; /* Start invisible */
+    transform: translateY(-50px); /* Start position (above) */
+    animation: floatIn 1.5s ease-out forwards; /* Animation properties */
+}
+
+/* Keyframes for the floating animation */
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.l-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.l-header p{
+    cursor: pointer;
+    
+    color: cyan;
+}
+.l-header p:hover{
+    text-decoration: underline;
+    color:white;
+}
+.contact{
+    margin-left: 80px;
+}
+.back-con{
+    
+    width: 100%;
+    height: 700px; /* Adjust as necessary */
+    background-image: url('thumbnail/jackets/projecttwo.png'); /* Background image applied */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    margin-top: 0px;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    max-height: 800px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.back-con {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%); /* Center the text */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.text-overlay p {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-shadow: 1px 1px 5px #000;
+    opacity: 0;                /* Initially hidden */
+    transition: opacity 1s ease; /* Smooth fade-in transition */
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.5s;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* More specific selectors for stronger targeting */
+.text-overlay .p1 {
+    font-family: 'Lobster', cursive;  /* Example font */
+    font-size: 28px;
+    color: #f4f4f4;
+}
+
+.text-overlay .p2 {
+    font-family: Tektur;
+    font-weight: bold;
+    color: cyan;
+    font-size: 50px;
+    max-width: 800px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);  /* Soft cyan glow */
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.6);
+  
+transition: text-shadow 0.3s ease-in-out;
+}
+
+.text-overlay .p3 {
+    font-family: 'Satisfy', cursive;
+    font-size: 22px;
+    color: #fff;
+}
+
+
+.jh{
+    margin-top: 80px;
+    margin-left:600px;
+    font-size:50px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px #000, 0 0 15px #00eaff, 0 0 25px #00eaff;
+    letter-spacing: 2px;
+    color: #e0f7fa;
+    text-transform: uppercase;
+    opacity: 0; /* Start invisible */
+    transform: translateY(-50px); /* Start position (above) */
+    animation: floatIn 1.5s ease-out forwards; /* Animation properties */
+
+}
+/* Keyframes for the floating animation */
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.jackets {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+    background-color: #f0f4f8;
+}
+
+.jacket-item {
+    position: relative;
+    width: 220px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.jacket-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.jacket-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.4s;
+    border-bottom: 3px solid #333;
+}
+
+.jacket-item:hover img {
+    transform: scale(1.1);
+}
+
+.jacket-info {
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.jacket-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.price-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+.jacket-item:hover .price-tag {
+    background-color: #ff4747;
+}
+button{
+    padding:15px 30px;
+    margin-right: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    transition: background-color 0.5s ;
+    transition: color 0.5s;
+}
+    /* Hover effect */
+    button:hover {
+        background-color: white;
+        color: black;
+        
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Active state */
+    button:active {
+        background-color: cyan;
+        
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+   
