@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        .contact-container {
+            width: 80%;
+            max-width: 700px;
+            margin: 100px auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            margin-bottom: 15px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .contact-container p {
+            margin-bottom: 25px;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form label {
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+            text-align: left;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #333;
+            background-color: #f9f9f9;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #00eaff;
+            box-shadow: 0 0 8px rgba(0, 234, 255, 0.4);
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #00eaff;
+            color: #333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-container {
+                width: 90%;
+                margin-top: 50px;
+                padding: 20px;
+            }
+
+            .contact-container h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out through the contact details below or send me a message directly!</p>
+
+        <div class="contact-info">
+            <p>Email: <a href="mailto:your-email@example.com">chomesolomon05@gmail.com</a></p>
+            <p>Phone: +254 746 415 318</p>
+            <p>WhatsApp: <a href="https://wa.me/254783434955" target="_blank">Message on WhatsApp</a></p>
+        </div>
+
+        <form class="contact-form" onsubmit="sendMessage(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <script src="contactme.js"></script>
+</body>
+</html>
